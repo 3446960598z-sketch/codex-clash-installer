@@ -1,22 +1,24 @@
 # Codex + Clash Verge Automated Installer
 
-Cross-platform CLI tool (Windows & macOS) that automates downloading and installing the latest Clash Verge Rev and Codex (ChatGPT desktop app).
+Cross-platform (Windows / macOS) automated installer for the latest Clash Verge Rev and Codex (ChatGPT desktop app).
 
 ## Features
-- Dynamic latest version retrieval (GitHub API / CDN)
-- Multi-source speed test + automatic proxy detection (system proxy, Clash ports, env vars)
-- Multi-threaded download with total + segmented progress bars
-- Download to the directory of the running executable
+- Dynamic latest version detection
+- Multi-source + automatic proxy speed selection (system proxy, Clash ports, environment variables)
+- Multi-threaded download with progress bars
+- Downloads installers next to the executable
 - SHA256 verification
-- Guided Windows flow: topmost console → open registration link → download Clash → GUI install → download Codex MSIX → Add-AppxPackage → open chatgpt.com → final verify → self-delete
-- macOS support via .command launcher with admin password popup
+- Windows guided flow: topmost window → open registration link → Clash GUI install → Codex MSIX via Add-AppxPackage → open chatgpt.com → final verification → self-delete
+- macOS support via launcher script
 
 ## Build
 ```bash
 make
-# or
-go build -o dist/codex-clash-installer-win-amd64.exe .
 ```
 
 ## Usage
-Run the platform binary. On Windows it follows the guided sequence and cleans itself up after successful verification.
+Run the binary for your platform. On Windows the tool follows the guided sequence and removes itself after successful verification.
+
+See also:
+- [README.zh.md](README.zh.md) (中文)
+- [README.ja.md](README.ja.md) (日本語)
